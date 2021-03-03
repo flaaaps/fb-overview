@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
-const FixturesQuery = gql`
-    query Fixtures {
-        fixtures {
+const LiveFixturesQuery = gql`
+    query LiveFixtures {
+        fixtures(live: true) {
             id
             timestamp
             league {
@@ -26,4 +26,4 @@ const FixturesQuery = gql`
     }
 `;
 
-export default FixturesQuery;
+export default LiveFixturesQuery;
